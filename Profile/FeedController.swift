@@ -12,13 +12,14 @@ class FeedController: UIViewController {
     
     
     //пустой
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = .yellow
+        self.title = "Feed"
         
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            self.view.backgroundColor = .yellow
-            
-        }
-        
+    }
+    
 }
 
 

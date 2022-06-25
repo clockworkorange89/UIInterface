@@ -16,33 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let  windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        // создание navigation bar  и tab bar
-        func createFeedViewController() -> UINavigationController {
-            let feedViewController = FeedController()
-            feedViewController.title = "Feed"
-            feedViewController.tabBarItem = UITabBarItem(title: "Feed", image: UIImage(systemName: "house"), tag: 0)
-            return UINavigationController(rootViewController: feedViewController)
-            
-        }
-        
-        
-        func createProfileViewController() -> UINavigationController {
-            let profileViewController = ProfileViewController()
-            profileViewController.title = "Profile"
-            profileViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.circle"), tag: 1)
-            return UINavigationController(rootViewController: profileViewController)
-        }
-        
-        func createTabBarController() -> UITabBarController {
-            UITabBar.appearance().backgroundColor = .systemBlue
-            let tabBarController = UITabBarController()
-            tabBarController.viewControllers = [createFeedViewController(), createProfileViewController()]
-            return tabBarController
-        }
-        
-        
         window?.windowScene = windowScene
-        window?.rootViewController = createTabBarController()
+        window?.rootViewController = TabBarController()
         window?.makeKeyAndVisible()
         
     }
