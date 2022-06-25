@@ -5,7 +5,7 @@ import UIKit
 
 
 class ProfileViewController: UIViewController {
-
+    
     private lazy var profileHeaderView: ProfileHeaderView = {
         let profileHeaderView =  ProfileHeaderView()
         profileHeaderView.backgroundColor = .systemGray
@@ -20,6 +20,7 @@ class ProfileViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        self.navigationController?.isNavigationBarHidden = true
         super.viewDidLoad()
         self.view.backgroundColor = .lightGray
         self.title = "Profile"
