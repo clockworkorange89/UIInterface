@@ -40,7 +40,7 @@ final class TabBarController:  UITabBarController {
     }
     
     private func setupTabBar() {
-        let dataSource: [TabBarItem] = [.profile, .feed]
+        let dataSource: [TabBarItem] = [.feed, .profile]
         self.viewControllers = dataSource.map {
             switch $0 {
             case .feed:
